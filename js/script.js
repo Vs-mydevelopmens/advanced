@@ -280,7 +280,7 @@ cartLink.addEventListener("click", function (e) {
 // ==========================================
 // <ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
 // ==========================================
-$('.header-burger__link a').click(function () {
+$('.header-burger__link').click(function () {
     $('.menu-active').removeClass('menu-active');
     $(this).addClass('menu-active');
 });
