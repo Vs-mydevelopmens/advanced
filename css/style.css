@@ -260,12 +260,9 @@ body.lock {
   padding: 0 20px;
   -webkit-box-shadow: 14px 14px 14px 0px rgba(69, 143, 246, 0.13);
   box-shadow: 14px 14px 14px 0px rgba(69, 143, 246, 0.13);
-  z-index: 6;
 }
 
 .header__logo {
-  position: relative;
-  z-index: 5;
   display: block;
   padding: 10px 0;
 }
@@ -518,18 +515,6 @@ textarea.input {
   padding: 0 12px;
   display: inline-block;
   position: relative;
-}
-
-.header-burger__link:hover {
-  font-weight: 700;
-  color: #ffffff;
-  -webkit-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
-  transition: all 0.8s ease;
-  padding: 0 12px;
-  background-color: #458ff6;
-  border-radius: 5px;
-  opacity: 1;
 }
 
 .ibg {
@@ -813,7 +798,7 @@ textarea.input {
     height: 100%;
     overflow: auto;
     background-color: #f4f7f7;
-    padding: 30px;
+    padding: 30px 30px 60px 30px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
