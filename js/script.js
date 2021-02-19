@@ -280,18 +280,11 @@ cartLink.addEventListener("click", function (e) {
 // ==========================================
 // <ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
 // ==========================================
-// $('.header-burger__link a').click(function () {
-//     $('.active').removeClass('active');
-//     $(this).addClass('active');
-// });
-// ==========================================
-
-$(document).ready(function () {
-    $('.header-burger__link').click(function (event) {
-        $('.header-burger__link').toggleClass('menu-active');
-        $('body').toggleClass('lock');
-    });
+$('.header-burger__link a').click(function () {
+    $('.menu-active').removeClass('menu-active');
+    $(this).addClass('menu-active');
 });
+// ==========================================
 // ==========================================
 // </ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
 // ==========================================
