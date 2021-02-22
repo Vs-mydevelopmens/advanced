@@ -166,149 +166,6 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
-// BildSlider
-let sliders = document.querySelectorAll('._swiper');
-if (sliders) {
-	for (let index = 0; index < sliders.length; index++) {
-		let slider = sliders[index];
-		if (!slider.classList.contains('swiper-bild')) {
-			let slider_items = slider.children;
-			if (slider_items) {
-				for (let index = 0; index < slider_items.length; index++) {
-					let el = slider_items[index];
-					el.classList.add('swiper-slide');
-				}
-			}
-			let slider_content = slider.innerHTML;
-			let slider_wrapper = document.createElement('div');
-			slider_wrapper.classList.add('swiper-wrapper');
-			slider_wrapper.innerHTML = slider_content;
-			slider.innerHTML = '';
-			slider.appendChild(slider_wrapper);
-			slider.classList.add('swiper-bild');
-		}
-		if (slider.classList.contains('_gallery')) {
-			// slider.data('LightGallery').destroy(true);
-		}
-	}
-	slider_bild_callback();
-
-}
-
-function slider_bild_callback(params) { }
-
-
-
-let headerSlider = new Swiper('.header-slider__item', {
-
-	// effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
-
-	observer: true,
-	observeParents: true,
-	slidesPerView: 3,
-	spaceBetween: 24,
-	// autoHeight: true,
-	speed: 800,
-	// touchRatio: 0,
-	// simulateTouch: false,
-	loop: true,
-	// lazy: true,
-	preloadImages: false,
-	// dotts
-	// pagination: {
-	// 	el: '.slider-quality__pagging',
-	// 	clickable: true,
-	// },
-	// Arrows
-	navigation: {
-		nextEl: '.header-slider-button__next',
-		prevEl: '.header-slider-button__prev',
-	},
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-			spaceBetween: 10,
-			autoHeight: true,
-		},
-		420: {
-			slidesPerView: 2,
-			spaceBetween: 10,
-			autoHeight: true,
-		},
-		768: {
-			slidesPerView: 3,
-			spaceBetween: 14,
-		},
-		992: {
-			slidesPerView: 3,
-			spaceBetween: 20,
-		},
-		1268: {
-			slidesPerView: 3,
-			spaceBetween: 24,
-		},
-	},
-	// on: {
-	// 	lazyImageReady: function () {
-	// 		ibg();
-	// 	},
-	// },
-	// And if we need scroLLbar
-	// Scrollbar: {
-	// 	el: '.swiper-scrollbar',
-	// },
-});
-// ==========================================
-
-// ==========================================
-// <КАРТОЧКА КОРЗИНЫ ШАПКИ САЙТА>
-// ==========================================
-let cartLink = document.querySelector('.header-cart');
-let cartItem = document.querySelector('.header-products');
-cartLink.addEventListener("click", function (e) {
-    cartLink.classList.toggle('_active');
-    cartItem.classList.toggle('_active');
-});
-// ==========================================
-// </КАРТОЧКА КОРЗИНЫ ШАПКИ САЙТА>
-// ==========================================
-
-// ==========================================
-// <ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
-// ==========================================
-$('.header-burger__link').click(function () {
-    $('.menu-active').removeClass('menu-active');
-    $(this).addClass('menu-active');
-});
-// ==========================================
-// ==========================================
-// </ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
-// ==========================================
-
-// ==========================================
-// <WEBP IMAGE>
-// ==========================================
-function testWebP(callback) {
-    var webP = new Image();
-    webP.onload = webP.onerror = function () {
-        callback(webP.height == 2);
-    };
-    webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
-testWebP(function (support) {
-    if (support == true) {
-        document.querySelector('body').classList.add('webp');
-    } else {
-        document.querySelector('body').classList.add('no-webp');
-    }
-});
-// ==========================================
-// </WEBP IMAGE>
-// ==========================================
 
 // ==========================================
 // <2 СКРИПТА НА ИЗОБРАЖЕНИЯ, ЕСЛИ НЕ ОТОБРАЖАЕТСЯ, АКТИВНЫЙ СКРИПТ ЗАКОМЕНТИРОВАТЬ, А ЗАКОМЕНТИРОВАННЫЙ РАССКОМЕНТИРОВАТЬ>
@@ -333,4 +190,15 @@ ibg();
 // ibg();
 // ==========================================
 // <2 СКРИПТА НА ИЗОБРАЖЕНИЯ>
+// ==========================================
+
+// ==========================================
+// <ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
+// ==========================================
+$('a').click(function () {
+    $('.menu-active').removeClass('menu-active');
+    $(this).addClass('menu-active');
+});
+// ==========================================
+// </ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
 // ==========================================
