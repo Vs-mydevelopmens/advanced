@@ -195,7 +195,7 @@ ibg();
 // ==========================================
 // <ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
 // ==========================================
-$('a').click(function () {
+$('.header-burger__link').click(function () {
     $('.menu-active').removeClass('menu-active');
     $(this).addClass('menu-active');
 });
