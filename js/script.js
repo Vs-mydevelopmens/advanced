@@ -200,5 +200,10 @@ $('.header-burger__link').click(function () {
     $(this).addClass('menu-active');
 });
 // ==========================================
+$('.footer-bottom__language-item').click(function () {
+    $('.lang-active').removeClass('lang-active');
+    $(this).addClass('lang-active');
+});
+// ==========================================
 // </ВЫДЕЛЕНИЕ АКТИВНОГО МЕНЮ>
 // ==========================================
